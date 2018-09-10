@@ -121,6 +121,16 @@ target 'WordPress' do
         shared_with_all_pods
         shared_with_networking_pods
     end
+
+    ## UI Tests
+    ## ========
+    ##
+    target 'WordPressUITests' do
+        inherit! :search_paths
+
+        shared_test_pods
+        pod 'AppCenterXCUITestExtensions'
+    end
 end
 
 
