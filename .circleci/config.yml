@@ -18,6 +18,10 @@ jobs:
           name: Set Ruby Version
           command:  echo "ruby-2.4" > ~/.ruby-version
 
+      - run:
+          name: Update bundler
+          command:  gem install bundler
+
       # Install 3rd party tools
       - run:
           name: Install 3rd party
