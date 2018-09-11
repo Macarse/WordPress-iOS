@@ -14,9 +14,9 @@ jobs:
       - checkout
 
     # Install 3rd party tools
-    - run:
-        name: Install 3rd party
-        command: rake dependencies
+      - run:
+          name: Install 3rd party
+          command: rake dependencies
 
       # Install CocoaPods
       - run:
