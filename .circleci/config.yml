@@ -18,19 +18,18 @@ jobs:
           name: Set Ruby Version
           command:  echo "ruby-2.4" > ~/.ruby-version
 
-      - run:
-          name: Update bundler
-          command:  ruby -v
+      # Bundle install
+      - run: bundle check || bundle install
 
       # Install 3rd party tools
       - run:
           name: Install 3rd party
-          command: rake dependencies
+          command: bundle exec rake dependencies
 
       # Install CocoaPods
       - run:
           name: Install CocoaPods
-          command: pod install
+          command: bundle exec pod install
 
       # Build the app and run tests
       - run:
