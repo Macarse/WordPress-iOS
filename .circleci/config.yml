@@ -20,7 +20,7 @@ jobs:
 
       - run:
           name: Update bundler
-          command:  gem install bundler
+          command:  ruby -v
 
       # Install 3rd party tools
       - run:
